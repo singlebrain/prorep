@@ -16,10 +16,50 @@ class Welcome extends CI_Controller {
 	 *
 	 * So any other public methods not prefixed with an underscore will
 	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
+	 *  https://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$this->load->view('login');
+	}
+	public function checklogin()
+	{
+		$this->form_validation->set_rules('email','email','required');
+		$this->form_validation->set_rules('password','password','callback_verifyuser|required');
+
+		if($this->form_validation->run()==false)
+		{
+			$this->load->view('login');
+
+
+		}
+		else
+		{	
+			redirect('LoginController/index');	
+		}
+
+	}
+	
+	public function verifyuser()
+	{
+		$uid = $this->input->post('email');
+		$password = $this->input->post('password');
+		$this->load->model('LoginModel');
+		
+		if($this->LoginModel->login($uid,$password)==true)
+		{
+			return true;
+				//$this->load->view('welcome_message');
+		}
+		else
+		{
+			$this->form_validation->set_message('verifyuser','incorrect password or username');
+			//$this->load->view('login');
+			return false;
+		}
+		
+		
+		
 	}
 }
+?>
