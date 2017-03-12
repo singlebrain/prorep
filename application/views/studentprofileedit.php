@@ -65,17 +65,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <li>
                             <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Search</a>
                         </li>
+                       
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Cordinated Projects</a>
-                            
-                            <!-- /.nav-second-level -->
+                            <a href="tables.html"><i class="fa fa-table fa-fw"></i> Upload Project</a>
                         </li>
                         <li>
-                            <a href="tables.html"><i class="fa fa-table fa-fw"></i> Upload Rights</a>
-                        </li>
-                        <li>
-                            <a href="<?php echo base_url('application/controllers/facultyprofileedit.php') ?>"><i class="fa fa-edit fa-fw"></i> Profile Settings</a>
-                        </li> 
+                            <a href="#"><i class="fa fa-edit fa-fw"></i> Profile Settings</a>
+                        </li>  
                         <li>
                             <a href="#"><i class="fa fa-edit fa-fw"></i> Logout</a>
                         </li>  
@@ -103,7 +99,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="panel-body">
                             <div class="row">
                             <?php echo validation_errors();?>
-                            <?php echo form_open('facultyprofileedit/checkform'); ?>
+                            <?php echo form_open('studentprofileedit/checkform'); ?>
                                 <div class="col-lg-6">
                                     <form role="form" action="">
                                         <div class="form-group">
@@ -126,7 +122,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             <label>E-mail id</label>
                                             <input name= "email" class="form-control" >
                                         </div>
-                                       
+                                        <div class="form-group">
+                                            <label>Roll Num.</label>
+                                            <input name= "rollnum" class="form-control" >
+                                        </div>
+                                        
                                         
                                         <button type="submit" class="btn btn-default">Submit Button</button>
                                         <button type="reset" class="btn btn-default">Reset Button</button>

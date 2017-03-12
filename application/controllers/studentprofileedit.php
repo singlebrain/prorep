@@ -1,16 +1,17 @@
 <?php
 
-class facultyprofileedit extends CI_Controller {
+class studentprofileedit extends CI_Controller {
 
 
 	public function index()
 	{
 
-		$this->load->view('facultyprofileedit');
+		$this->load->view('studentprofileedit');
 	}
 	public function checkform()
 	{
 		$this->form_validation->set_rules('name','name','required');
+		$this->form_validation->set_rules('rollnum','roll num','required');
 		$this->form_validation->set_rules('pass','Current passord','required|callback_passcheck');
 		$this->form_validation->set_rules('pass1',' New password','required');
 		$this->form_validation->set_rules('pass2','Re-type password','required|callback_passmatch');
@@ -18,13 +19,13 @@ class facultyprofileedit extends CI_Controller {
 
 		if($this->form_validation->run()==false)
 		{
-			$this->load->view('facultyprofileedit');
+			$this->load->view('studentprofileedit');
 
 
 		}
 		else
 		{
-			$this->load->view('facultyhome');
+			$this->load->view('studenthome');
 
 
 		}
