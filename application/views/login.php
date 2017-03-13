@@ -39,10 +39,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 
 <body>
-
+    <br><br>
     <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-md-offset-4">
+        <div class="col-md-12">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
                 <div class="login-panel panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">Please Sign In</h3>
@@ -64,13 +66,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     </label>
                                 </div>
                                 <!-- Change this to a button or input when using this as a form -->
-                                <input  name="login" class="btn btn-lg btn-success btn-block" type="submit">
+                                <input  name="login" class="btn btn-lg btn-success btn-block" value="sign in" type="submit">
                             </fieldset>
                         </form>
+
                     </div>
                 </div>
+                
+                    <form role="form" action="welcome/signup">
+                        <fieldset>
+                            <div class="form-group">  
+                            <input  name="login" class="btn btn-lg btn-success btn-block" value="Dont have an account..sign up" type="submit">
+                        </fieldset>
+                    </form>
+                
             </div>
         </div>
+         
     </div>
 
     <!-- jQuery -->

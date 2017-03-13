@@ -18,7 +18,6 @@ class LoginModel extends CI_Model
       	  if($row->sid==$uid)
       	  {
       	  	if($row->pass==$password)
-      	  		echo $row->sid;
       	  		return true;
       	  }
 		}

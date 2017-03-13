@@ -41,7 +41,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 
 <body>
-
+<?php $usid = $this->session->userdata('user_id');?>
     <div id="wrapper">
 
         <!-- Navigation -->
@@ -70,10 +70,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <a href="tables.html"><i class="fa fa-table fa-fw"></i> Upload Project</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-edit fa-fw"></i> Profile Settings</a>
+                            <a href="tables.html"><i class="fa fa-edit fa-fw"></i> Profile Settings</a>
+                            <!--<a href="#"><i class="fa fa-edit fa-fw"></i> Profile Settings</a>-->
                         </li>  
                         <li>
-                            <a href="#"><i class="fa fa-edit fa-fw"></i> Logout</a>
+                            <a onclick= "<?php echo base_url();?>welcome/index"><i class="fa fa-edit fa-fw"></i> Logout</a>
                         </li>  
                     </ul>
                 </div>
@@ -99,7 +100,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="panel-body">
                             <div class="row">
                             <?php echo validation_errors();?>
-                            <?php echo form_open('studentprofileedit/checkform'); ?>
+                            <?php echo form_open('studentprofileedit/checkform/'.$usid); ?>
                                 <div class="col-lg-6">
                                     <form role="form" action="">
                                         <div class="form-group">
@@ -127,9 +128,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             <input name= "rollnum" class="form-control" >
                                         </div>
                                         
-                                        
-                                        <button type="submit" class="btn btn-default">Submit Button</button>
-                                        <button type="reset" class="btn btn-default">Reset Button</button>
+                                        <div class="col-lg-6">
+                                        <button type="submit" class="btn btn-lg btn-success btn-block">Submit Button</button>
+                                        </div>
+                                        <div class="col-lg-6">
+                                        <button type="reset" class="btn btn-lg btn-success btn-block">Reset Button</button>
+                                        </div>
                                     </form>
                                 </div>
                                 

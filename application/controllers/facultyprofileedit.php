@@ -5,7 +5,7 @@ class facultyprofileedit extends CI_Controller {
 
 	public function index()
 	{
-
+		$this->session->set_userdata('user_id', $usid);
 		$this->load->view('facultyprofileedit');
 	}
 	public function checkform()

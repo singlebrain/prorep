@@ -128,21 +128,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             <input name= "email" class="form-control" >
                                         </div>
                                        
-                                        
-                                        <button type="submit" class="btn btn-default">Submit Button</button>
-                                        <button type="reset" class="btn btn-default">Reset Button</button>
+                                        <div class="col-lg-6">
+                                        <button type="submit" class="btn btn-lg btn-success btn-block">Submit Button</button>
+                                        </div>
+                                        <div class="col-lg-6">
+                                        <button type="reset" class="btn btn-lg btn-success btn-block">Reset Button</button>
+                                        </div>
                                     </form>
                                 </div>
-                                
-                                <!-- /.col-lg-6 (nested) -->
                             </div>
-                            <!-- /.row (nested) -->
                         </div>
-                        <!-- /.panel-body -->
                     </div>
-                    <!-- /.panel -->
                 </div>
-                <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
         </div>

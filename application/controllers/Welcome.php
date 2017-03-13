@@ -24,6 +24,9 @@ class Welcome extends CI_Controller {
 	}
 	public function checklogin()
 	{
+		$usid = $this->input->post('email');
+		////$this->load->library('session');
+		//$this->session->set_userdata('user_id', $usid);
 		$this->form_validation->set_rules('email','email','required');
 		$this->form_validation->set_rules('password','password','callback_verifyuser|required');
 
@@ -35,13 +38,15 @@ class Welcome extends CI_Controller {
 		}
 		else
 		{	
-			redirect('LoginController/index');	
+			
+			
+			redirect(base_url().'index.php/studentprofileedit/asdfg/'.$usid);	
 		}
 
 	}
 	
 	public function verifyuser()
-	{
+	{echo 'verifyuser'.$this->session->userdata('user_id');
 		$uid = $this->input->post('email');
 		$password = $this->input->post('password');
 		$this->load->model('LoginModel');
