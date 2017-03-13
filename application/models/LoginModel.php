@@ -22,11 +22,15 @@ class LoginModel extends CI_Model
       	  }
 		}
 
-
-
-		
-			return false;
-		
+			return false;	
 	}
+	public function stud_create($pass1,$name,$email,$rollnum)
+	{
+		$this->load->database();
+		$dept="cs";
+		
+		$this->db->query('INSERT INTO student (name, sid, pass, up_right, dept) VALUES ( \'' .$name.'\',  \'' .$rollnum.'\', \'' .$pass1.'\',\'0\',  \'' .$dept.'\')');
+	}
+
 }
 ?>

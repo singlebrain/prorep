@@ -17,7 +17,14 @@ class Welcome extends CI_Controller {
 	 * So any other public methods not prefixed with an underscore will
 	 * map to /index.php/welcome/<method_name>
 	 *  https://codeigniter.com/user_guide/general/urls.html
-	 */
+	*/
+	 function __construct() 
+    {
+        parent::__construct();
+        $this->load->library('session');
+        $this->load->model('LoginModel');
+    }
+	 
 	public function index()
 	{
 		$this->load->view('login');
@@ -46,7 +53,8 @@ class Welcome extends CI_Controller {
 	}
 	
 	public function verifyuser()
-	{echo 'verifyuser'.$this->session->userdata('user_id');
+	{
+
 		$uid = $this->input->post('email');
 		$password = $this->input->post('password');
 		$this->load->model('LoginModel');
@@ -62,9 +70,53 @@ class Welcome extends CI_Controller {
 			//$this->load->view('login');
 			return false;
 		}
-		
-		
-		
 	}
+	public function signup()
+	{
+		$this->load->view('signup');
+
+	}
+	public function create_student()
+	{
+		
+
+		$this->form_validation->set_rules('name','name','required');
+		$this->form_validation->set_rules('rollnum','roll num','required');
+		$this->form_validation->set_rules('pass1',' New password','required');
+		$this->form_validation->set_rules('pass2','Re-type password','required|callback_passmatch');
+		$this->form_validation->set_rules('email','E-mail id','required|valid_email');
+
+		if($this->form_validation->run()==false)
+		{
+			$this->load->view('signup');
+
+
+		}
+		else
+		{	
+			$pass1 = $this->input->post('pass1');
+			$name = $this->input->post('name');
+			$email = $this->input->post('email');
+			$rollnum = $this->input->post('rollnum');
+			$this->LoginModel->stud_create($pass1,$name,$email,$rollnum);
+			$this->load->view('login');	
+		}
+
+	}
+	public function passmatch()
+	{
+		$pass1 = $this->input->post('pass1');
+		$pass2 = $this->input->post('pass2');
+		if($pass1 == $pass2)
+		{	
+			return true;
+		}
+		else
+		{
+			$this->form_validation->set_message('passmatch','password doesn\'t match');
+			return false;
+		}
+	}
+
 }
 ?>
