@@ -85,7 +85,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <a href=<?php echo base_url().'index.php/faculty/asdfg/'.$usid ?>><i class="fa fa-wrench fa-fw"></i> Profile Settings</a>
                         </li> 
                         <li>
-                            <a href="tables.html"><i class="fa fa-user-plus fa-fw" aria-hidden="true"></i> Create new Faculty</a>
+                            <a href=<?php echo base_url().'index.php/faculty/facultycreate/'.$usid?>><i class="fa fa-user-plus fa-fw" aria-hidden="true"></i> Create new Faculty</a>
                         </li>
                         <li>
                             <a href=<?php echo base_url().'index.php/welcome'?>><i class="fa fa-power-off fa-fw"></i> Logout</a>

@@ -45,7 +45,7 @@ class student extends CI_Controller {
 			
 
 			$this->StudentModel->modify($usid,$pass1,$name,$email,$rollnum);
-			$this->load->view('studenthome');
+			redirect(base_url().'index.php/student/asdfg/'.$usid);	
 			
 
 		}
