@@ -1,6 +1,6 @@
 <?php
 
-class studentprofileedit extends CI_Controller {
+class student extends CI_Controller {
 	
 	//$usid;
 	function __construct() 

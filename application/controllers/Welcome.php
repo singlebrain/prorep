@@ -46,11 +46,11 @@ class Welcome extends CI_Controller {
 		}
 		elseif( $usert=='student')
 		{	
-			redirect(base_url().'index.php/studentprofileedit/asdfg/'.$usid);	
+			redirect(base_url().'index.php/student/asdfg/'.$usid);	
 		}
 		elseif( $usert=='faculty')
 		{	
-			redirect(base_url().'index.php/faculty/asdfg/'.$usid);	
+			redirect(base_url().'index.php/SearchController/asdfg/'.$usid);	
 		}
 
 	}

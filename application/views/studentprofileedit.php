@@ -70,7 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <a href= <?php echo base_url().'index.php/upload/upload/'.$usid;?>><i class="fa fa-edit fa-fw"></i> Upload Project</a>
                         </li>
                         <li>
-                            <a href=<?php echo base_url().'index.php/studentprofileedit/asdfg/'.$usid?> ><i class="fa fa-wrench fa-fw"></i> Profile Settings</a>
+                            <a href=<?php echo base_url().'index.php/student/asdfg/'.$usid?> ><i class="fa fa-wrench fa-fw"></i> Profile Settings</a>
                             <!--<a href="#"><i class="fa fa-edit fa-fw"></i> Profile Settings</a>-->
                         </li>  
                         <li>

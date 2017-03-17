@@ -28,6 +28,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <!-- Custom Fonts -->
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+     <link href="<?php echo base_url('assets/css/sb-admin-2.css') ?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/css/metisMenu.min.css') ?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/css/bootstrap.min.css') ?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/css/font-awesome.min.css') ?>" rel="stylesheet"> 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,7 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 
 <body>
-
+    <?php $usid = $this->session->userdata('user_id');?>
     <div id="wrapper">
 
         <!-- Navigation -->
@@ -64,25 +68,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
+                                               
                         <li>
-                            <a href="index.html"><i class="fa fa-search fa-fw"></i> search</a>
+                            <a href=<?php echo base_url().'index.php/SearchController/asdfg/'.$usid ?>><i class="fa fa-search fa-fw"></i> Search</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> upload right</a>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Cordinated Projects</a>
                             
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="tables.html"><i class="fa fa-table fa-fw"></i> coordinated projects</a>
+                            <a href="tables.html"><i class="fa fa-edit fa-fw "></i> Upload Rights</a>
+                        </li>
+                        
+                        <li>
+                            <a href=<?php echo base_url().'index.php/faculty/asdfg/'.$usid ?>><i class="fa fa-wrench fa-fw"></i> Profile Settings</a>
+                        </li> 
+                        <li>
+                            <a href="tables.html"><i class="fa fa-user-plus fa-fw" aria-hidden="true"></i> Create new Faculty</a>
                         </li>
                         <li>
-                            <a href="forms.html"><i class="fa fa-wrench fa-fw"></i> settings</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-power-off fa-fw"></i> log out</a>
-                            
-                            <!-- /.nav-second-level -->
-                        </li>
+                            <a href=<?php echo base_url().'index.php/welcome'?>><i class="fa fa-power-off fa-fw"></i> Logout</a>
+                        </li>  
                        
                         
                     </ul>

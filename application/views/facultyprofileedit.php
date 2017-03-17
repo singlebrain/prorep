@@ -42,7 +42,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 
 <body>
-
+    <?php $usid = $this->session->userdata('user_id');?>
     <div id="wrapper">
 
         <!-- Navigation -->
@@ -64,7 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <ul class="nav" id="side-menu">
                        
                         <li>
-                            <a href="index.html"><i class="fa fa-search fa-fw"></i> Search</a>
+                            <a href=<?php echo base_url().'index.php/SearchController/asdfg/'.$usid ?>><i class="fa fa-search fa-fw"></i> Search</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Cordinated Projects</a>
@@ -76,7 +76,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </li>
                         
                         <li>
-                            <a href="<?php echo base_url('application/controllers/faculty.php') ?>"><i class="fa fa-wrench fa-fw"></i> Profile Settings</a>
+                            <a href=<?php echo base_url().'index.php/faculty/asdfg/'.$usid ?>><i class="fa fa-wrench fa-fw"></i> Profile Settings</a>
                         </li> 
                         <li>
                             <a href="tables.html"><i class="fa fa-user-plus fa-fw" aria-hidden="true"></i> Create new Faculty</a>
