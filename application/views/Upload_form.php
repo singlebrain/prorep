@@ -71,10 +71,10 @@
                         </li>
                        
                         <li>
-                            <a href= <?php echo '../../upload/upload/'.$usid;?>><i class="fa fa-edit fa-fw"></i> Upload Project</a>
+                            <a href= <?php echo base_url().'index.php/upload/upload/'.$usid;?>><i class="fa fa-edit fa-fw"></i> Upload Project</a>
                         </li>
                         <li>
-                            <a href=<?php echo '../../studentprofileedit/asdfg/'.$usid?> ><i class="fa fa-wrench fa-fw"></i> Profile Settings</a>
+                            <a href=<?php echo base_url().'index.php/studentprofileedit/asdfg/'.$usid?> ><i class="fa fa-wrench fa-fw"></i> Profile Settings</a>
                             <!--<a href="#"><i class="fa fa-edit fa-fw"></i> Profile Settings</a>-->
                         </li>  
                         <li>

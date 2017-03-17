@@ -64,7 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <ul class="nav" id="side-menu">
                        
                         <li>
-                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Search</a>
+                            <a href="index.html"><i class="fa fa-search fa-fw"></i> Search</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Cordinated Projects</a>
@@ -72,13 +72,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="tables.html"><i class="fa fa-table fa-fw"></i> Upload Rights</a>
+                            <a href="tables.html"><i class="fa fa-edit fa-fw "></i> Upload Rights</a>
                         </li>
+                        
                         <li>
-                            <a href="<?php echo base_url('application/controllers/facultyprofileedit.php') ?>"><i class="fa fa-edit fa-fw"></i> Profile Settings</a>
+                            <a href="<?php echo base_url('application/controllers/faculty.php') ?>"><i class="fa fa-wrench fa-fw"></i> Profile Settings</a>
                         </li> 
                         <li>
-                            <a href="#"><i class="fa fa-edit fa-fw"></i> Logout</a>
+                            <a href="tables.html"><i class="fa fa-user-plus fa-fw" aria-hidden="true"></i> Create new Faculty</a>
+                        </li>
+                        <li>
+                            <a href=<?php echo base_url().'index.php/welcome'?>><i class="fa fa-power-off fa-fw"></i> Logout</a>
                         </li>  
                     </ul>
                 </div>

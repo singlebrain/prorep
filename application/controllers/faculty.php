@@ -1,9 +1,12 @@
 <?php
 
-class facultyprofileedit extends CI_Controller {
-
+class faculty extends CI_Controller {
 
 	public function index()
+	{
+
+	}
+	public function asdfg($usid)
 	{
 		$this->session->set_userdata('user_id', $usid);
 		$this->load->view('facultyprofileedit');
@@ -19,8 +22,6 @@ class facultyprofileedit extends CI_Controller {
 		if($this->form_validation->run()==false)
 		{
 			$this->load->view('facultyprofileedit');
-
-
 		}
 		else
 		{
