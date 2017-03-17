@@ -10,6 +10,12 @@
       public function index() { 
          $this->load->view('upload_form', array('error' => ' ' )); 
       } 
+      public function upload($usid) { 
+         
+         $this->session->set_userdata('user_id', $usid);
+         $this->load->view('upload_form', array('error' => ' ' )); 
+      } 
+      
 		
       public function do_upload() { 
          $config['upload_path']   = './uploads/'; 

@@ -63,19 +63,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <ul class="nav" id="side-menu">
                        
                         <li>
-                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Search</a>
+                            <a href=""><i class="fa fa-search fa-fw"></i> Search</a>
                         </li>
                        
                         <li>
-                            <a href="tables.html"><i class="fa fa-table fa-fw"></i> Upload Project</a>
+                            <a href= <?php echo '../../upload/upload/'.$usid;?>><i class="fa fa-edit fa-fw"></i> Upload Project</a>
                         </li>
                         <li>
-                            <a href="tables.html"><i class="fa fa-edit fa-fw"></i> Profile Settings</a>
+                            <a href= <?php echo '../../studentprofileedit/asdfg/'.$usid?> ><i class="fa fa-wrench fa-fw"></i> Profile Settings</a>
                             <!--<a href="#"><i class="fa fa-edit fa-fw"></i> Profile Settings</a>-->
                         </li>  
                         <li>
-                            <a onclick= "<?php echo base_url();?>welcome/index"><i class="fa fa-edit fa-fw"></i> Logout</a>
+                            <a href= "../../welcome"> <i class="fa fa-power-off fa-fw"></i> Logout</a>
                         </li>  
+                       
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
@@ -95,7 +96,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Basic Form Elements
+                            Update ur informations
                         </div>
                         <div class="panel-body">
                             <div class="row">
