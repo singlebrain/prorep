@@ -120,8 +120,8 @@
       <div class="col-lg-6">
                                     <form role="form" action="">
                                         <div class="form-group">
-                                            <label>Project id</label>
-                                            <input name= "pid" class="form-control" >
+                                            <label>Project Name</label>
+                                            <input name= "pname" class="form-control" >
                                         </div>
                                         <div class="form-group">
                                             <label>Student id</label>
@@ -132,12 +132,20 @@
                                             <input name= "cid" class="form-control">
                                         </div>
                                          <div class="form-group">
+                                            <label>department</label>
+                                            <input name= "dept" class="form-control">
+                                        </div>
+                                         <div class="form-group">
                                             <label>Number of members</label>
                                             <input name= "members" class="form-control">
                                         </div>
                                         <div class="form-group">
-                                            <label>Year</label>
-                                            <input name= "year" class="form-control" >
+                                            <label>commence date</label>
+                                            <input name= "com_date" class="form-control" >
+                                        </div>
+                                         <div class="form-group">
+                                            <label>metatags</label>
+                                            <input name= "metatags" class="form-control" >
                                         </div>
                                           <div class="form-group">
                                             <label>Filename</label>

@@ -30,9 +30,7 @@ if ($uploadOk == 0) {
 
 
 
-    require_once 'medoo.min.php';
-
-
+ require_once 'medoo.min.php';
 
 
 $database = new medoo([
