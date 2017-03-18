@@ -112,9 +112,9 @@
                         <div class="panel-body">
                             <div class="row">
                             <?php echo validation_errors();?>
-<?php echo form_open('fileuploadedit/checkform'); ?>
+
       <?php echo form_open_multipart('upload/do_upload');?> 
-        
+        <?php echo form_open('fileuploadedit/checkform'); ?>
       <div class="col-lg-6">
                                     <form role="form" action="">
                                         <div class="form-group">

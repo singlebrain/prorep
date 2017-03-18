@@ -10,11 +10,11 @@
       public function index() { 
          $this->load->view('upload_form', array('error' => ' ' )); 
       } 
-      public function upload($usid) { 
+     // public function upload($usid) { 
          
-         $this->session->set_userdata('user_id', $usid);
-         $this->load->view('upload_form', array('error' => ' ' )); 
-      } 
+        // $this->session->set_userdata('user_id', $usid);
+        // $this->load->view('upload_form', array('error' => ' ' )); 
+    //  } 
       
 		
       public function do_upload() { 
@@ -32,11 +32,11 @@
          else { 
 
             $data = array('upload_data' => $this->upload->data()); 
-            echo $data['upload_data'];
-            $this->load->model('UploadModel');
+           // echo $data['upload_data'];
+           // $this->load->model('UploadModel');
       
             $this->load->view('upload_success', $data); 
-              $this->UploadModel->uploader($data);
+             // $this->UploadModel->uploader($data);
          } 
       } 
    } 
