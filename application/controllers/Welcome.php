@@ -31,23 +31,26 @@ class Welcome extends CI_Controller {
 	}
 	public function checklogin()
 	{
-		$usid = $this->input->post('email');
-		////$this->load->library('session');
+		$usert= $this->input->post('usertype');
+		$usid= $this->input->post('email');	
+		//$this->load->library('session');
 		//$this->session->set_userdata('user_id', $usid);
 		$this->form_validation->set_rules('email','email','required');
 		$this->form_validation->set_rules('password','password','callback_verifyuser|required');
-
+		$this->form_validation->set_rules('usertype','select user type','required');
 		if($this->form_validation->run()==false)
 		{
 			$this->load->view('login');
 
 
 		}
-		else
+		elseif( $usert=='student')
 		{	
-			
-			
-			redirect(base_url().'index.php/studentprofileedit/asdfg/'.$usid);	
+			redirect(base_url().'index.php/student/asdfg/'.$usid);	
+		}
+		elseif( $usert=='faculty')
+		{	
+			redirect(base_url().'index.php/SearchController/asdfg/'.$usid);	
 		}
 
 	}
@@ -57,19 +60,27 @@ class Welcome extends CI_Controller {
 
 		$uid = $this->input->post('email');
 		$password = $this->input->post('password');
+		$usert = $this->input->post('usertype');
 		$this->load->model('LoginModel');
 		
-		if($this->LoginModel->login($uid,$password)==true)
+		if($this->LoginModel->loginstudent($uid,$password)==true && $usert=='student')
 		{
 			return true;
 				//$this->load->view('welcome_message');
 		}
-		else
+		elseif($this->LoginModel->loginfaculty($uid,$password)==true && $usert=='faculty')
+		{
+			return true;
+				//$this->load->view('welcome_message');
+		}
+		elseif($usert)
 		{
 			$this->form_validation->set_message('verifyuser','incorrect password or username');
 			//$this->load->view('login');
 			return false;
 		}
+		return true;
+
 	}
 	public function signup()
 	{

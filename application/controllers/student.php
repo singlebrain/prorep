@@ -1,6 +1,6 @@
 <?php
 
-class studentprofileedit extends CI_Controller {
+class student extends CI_Controller {
 	
 	//$usid;
 	function __construct() 
@@ -45,7 +45,7 @@ class studentprofileedit extends CI_Controller {
 			
 
 			$this->StudentModel->modify($usid,$pass1,$name,$email,$rollnum);
-			$this->load->view('studenthome');
+			redirect(base_url().'index.php/student/asdfg/'.$usid);	
 			
 
 		}

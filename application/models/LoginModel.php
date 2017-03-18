@@ -6,7 +6,7 @@
 class LoginModel extends CI_Model
 {
 	
-	public function login($uid, $password)
+	public function loginstudent($uid, $password)
 	{
 		# code...
 		$this->load->database();
@@ -16,6 +16,24 @@ class LoginModel extends CI_Model
 		{
       	  
       	  if($row->sid==$uid)
+      	  {
+      	  	if($row->pass==$password)
+      	  		return true;
+      	  }
+		}
+
+			return false;	
+	}
+	public function loginfaculty($uid, $password)
+	{
+		# code...
+		$this->load->database();
+		$query = $this->db->query('SELECT fid, pass FROM faculty');
+
+		foreach ($query->result() as $row)
+		{
+      	  
+      	  if($row->fid==$uid)
       	  {
       	  	if($row->pass==$password)
       	  		return true;

@@ -60,11 +60,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Password" name="password" type="text" value="">
                                 </div>
+                                <div class="form-group">
+                                    
+                                    <input type="radio" name="usertype"<?php if (isset($usert) && $usert=="faculty") echo "checked";?> value="faculty">Faculty
+                                    <input type="radio" name="usertype"
+                                    <?php if (isset($usert) && $usert=="student") echo "checked";?>
+                                    value="student">Student
+                                </div>
+                                <!--
                                 <div class="checkbox">
                                     <label>
                                         <input name="remember" type="checkbox" value="Remember Me">Remember Me
                                     </label>
                                 </div>
+                                -->
                                 <!-- Change this to a button or input when using this as a form -->
                                 <input  name="login" class="btn btn-lg btn-success btn-block" value="sign in" type="submit">
                             </fieldset>
