@@ -94,7 +94,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Profile Settings</h1>
+                    <h1 class="page-header">Create New Faculty</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -103,28 +103,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Basic Form Elements
+                            New faculty details
                         </div>
                         <div class="panel-body">
                             <div class="row">
                             <?php echo validation_errors();?>
-                            <?php echo form_open('faculty/checkform/'.$usid); ?>
+                            <?php echo form_open('faculty/checkcreate/'.$usid); ?>
                                 <div class="col-lg-6">
                                     <form role="form" action="">
-                                        <div class="form-group">
-                                            <label>Current Password</label>
-                                            <input name= "pass" class="form-control" >
-                                        </div>
+                                        
                                         <div class="form-group">
                                             <label>Name</label>
                                             <input name= "name" class="form-control">
                                         </div>
                                         <div class="form-group">
-                                            <label>New Password</label>
+                                            <label>User Name</label>
+                                            <input name= "facid" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Password</label>
                                             <input name= "pass1" class="form-control" >
                                         </div>
                                         <div class="form-group">
-                                            <label>Retype New Password</label>
+                                            <label>Retype Password</label>
                                             <input name= "pass2" class="form-control" >
                                         </div>
                                         <div class="form-group">

@@ -39,10 +39,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 
 <body>
-
+    <br><br>
     <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-md-offset-4">
+        <div class="col-md-12">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
                 <div class="login-panel panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">Please Sign In</h3>
@@ -58,19 +60,38 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Password" name="password" type="text" value="">
                                 </div>
+                                <div class="form-group">
+                                    
+                                    <input type="radio" name="usertype"<?php if (isset($usert) && $usert=="faculty") echo "checked";?> value="faculty">Faculty
+                                    <input type="radio" name="usertype"
+                                    <?php if (isset($usert) && $usert=="student") echo "checked";?>
+                                    value="student">Student
+                                </div>
+                                <!--
                                 <div class="checkbox">
                                     <label>
                                         <input name="remember" type="checkbox" value="Remember Me">Remember Me
                                     </label>
                                 </div>
+                                -->
                                 <!-- Change this to a button or input when using this as a form -->
-                                <input  name="login" class="btn btn-lg btn-success btn-block" type="submit">
+                                <input  name="login" class="btn btn-lg btn-success btn-block" value="sign in" type="submit">
                             </fieldset>
                         </form>
+
                     </div>
                 </div>
+                
+                    <form role="form" action="welcome/signup">
+                        <fieldset>
+                            <div class="form-group">  
+                            <input  name="login" class="btn btn-lg btn-success btn-block" value="Dont have an account..sign up" type="submit">
+                        </fieldset>
+                    </form>
+                
             </div>
         </div>
+         
     </div>
 
     <!-- jQuery -->

@@ -22,7 +22,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <!-- Custom CSS -->
     <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
-    <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -31,7 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link href="<?php echo base_url('assets/css/sb-admin-2.css') ?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/metisMenu.min.css') ?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/bootstrap.min.css') ?>" rel="stylesheet">
-    <link href="<?php echo base_url('assets/css/font-awesome.min.css') ?>" rel="stylesheet"> 
+    <link href="<?php echo base_url('assets/css/font-awesome.min.css') ?>" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -42,7 +41,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 
 <body>
-    <?php $usid = $this->session->userdata('user_id');?>
+<?php $usid = $this->session->userdata('user_id');?>
     <div id="wrapper">
 
         <!-- Navigation -->
@@ -63,27 +62,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                        
+                         <li>
+                            <a href=""><i class="fa fa-search fa-fw"></i> Search</a>
+                        </li>
+                       
                         <li>
-                            <a href=<?php echo base_url().'index.php/SearchController/asdfg/'.$usid ?>><i class="fa fa-search fa-fw"></i> Search</a>
+                            <a href= <?php echo base_url().'index.php/upload/upload/'.$usid;?>><i class="fa fa-edit fa-fw"></i> Upload Project</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Cordinated Projects</a>
-                            
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
-                            <a href="tables.html"><i class="fa fa-edit fa-fw "></i> Upload Rights</a>
-                        </li>
-                        
-                        <li>
-                            <a href=<?php echo base_url().'index.php/faculty/asdfg/'.$usid ?>><i class="fa fa-wrench fa-fw"></i> Profile Settings</a>
-                        </li> 
-                        <li>
-                            <a href= <?php echo base_url().'index.php/faculty/facultycreate/'.$usid?> ><i class="fa fa-user-plus fa-fw" aria-hidden="true"></i> Create new Faculty</a>
-                        </li>
-                        <li>
-                            <a href=<?php echo base_url().'index.php/welcome'?>><i class="fa fa-power-off fa-fw"></i> Logout</a>
+                            <a href=<?php echo base_url().'index.php/student/asdfg/'.$usid?> ><i class="fa fa-wrench fa-fw"></i> Profile Settings</a>
+                            <!--<a href="#"><i class="fa fa-edit fa-fw"></i> Profile Settings</a>-->
                         </li>  
+                        <li>
+                            <a href=<?php echo base_url().'index.php/welcome'?>> <i class="fa fa-power-off fa-fw"></i> Logout</a>
+                        </li>                       
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
@@ -103,12 +95,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Basic Form Elements
+                            Update ur informations
                         </div>
                         <div class="panel-body">
                             <div class="row">
                             <?php echo validation_errors();?>
-                            <?php echo form_open('faculty/checkform/'.$usid); ?>
+                            <?php echo form_open('studentprofileedit/checkform/'.$usid); ?>
                                 <div class="col-lg-6">
                                     <form role="form" action="">
                                         <div class="form-group">
@@ -131,7 +123,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             <label>E-mail id</label>
                                             <input name= "email" class="form-control" >
                                         </div>
-                                       
+                                        <div class="form-group">
+                                            <label>Roll Num.</label>
+                                            <input name= "rollnum" class="form-control" >
+                                        </div>
+                                        
                                         <div class="col-lg-6">
                                         <button type="submit" class="btn btn-lg btn-success btn-block">Submit Button</button>
                                         </div>
@@ -140,10 +136,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         </div>
                                     </form>
                                 </div>
+                                
+                                <!-- /.col-lg-6 (nested) -->
                             </div>
+                            <!-- /.row (nested) -->
                         </div>
+                        <!-- /.panel-body -->
                     </div>
+                    <!-- /.panel -->
                 </div>
+                <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
         </div>
