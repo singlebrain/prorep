@@ -10,7 +10,7 @@ class LoginModel extends CI_Model
 	{
 		# code...
 		$this->load->database();
-		$query = $this->db->query('SELECT name, sid, pass FROM student');
+		$query = $this->db->query('SELECT sid, pass FROM student');
 
 		foreach ($query->result() as $row)
 		{
@@ -18,7 +18,7 @@ class LoginModel extends CI_Model
       	  if($row->sid==$uid)
       	  {
       	  	if($row->pass==$password)
-      	  		echo $row->sid;
+      	  		//echo $row->sid;
       	  		return true;
       	  }
 		}

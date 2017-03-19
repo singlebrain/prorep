@@ -30,12 +30,11 @@ class Welcome extends CI_Controller {
 		if($this->form_validation->run()==false)
 		{
 			$this->load->view('login');
-
-
 		}
 		else
-		{	
-			redirect('LoginController/index');	
+		{	$usid = $this->input->post('email',true);
+			echo $usid;
+			redirect("LoginController/asd/".$usid);	
 		}
 
 	}

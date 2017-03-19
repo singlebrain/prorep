@@ -7,6 +7,7 @@ class SearchController extends CI_Controller {
 	{
 
 		$this->load->view('search');
+		
 	}
 }
 

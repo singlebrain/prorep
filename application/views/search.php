@@ -1,6 +1,4 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -151,16 +149,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 <!-- /.col-lg-8 -->
 
-                <div class="row">
+ <form action="filtering.php" method=get>
+                     <div class="row">
                         <div class="col-lg-12">
                                         <br>
                 <br>        
 
                           <div class="input-group custom-search-form">
-                            <input type="text" class="form-control" placeholder="Ivde njekk! Enik soukaryamundel search cheyyam!! alapinneyyy...">
+                            <input type="text" name="keyword" class="form-control" placeholder="Enter your keyword...">
                              <span class="input-group-btn">
                               <button class="btn btn-default" type="button">
-                                  <i class="fa fa-search"></i>
+                                  <i class="fa fa-search"></i> 
                              </button>
                              </span>
                          </div>
@@ -211,6 +210,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 <link rel="stylesheet" type="css/search.css">
 <div class="container-fluid">
+
     <div class="row">
         <div class="col-xs-6 col-sm-3">
             <div id="accordion" class="panel panel-primary behclick-panel">                                 
@@ -228,7 +228,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <li class="list-group-item">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value="">
+                                        <input type="checkbox" value="cse" name="depart[]">
                                         Computer Science and Engineering
                                     </label>
                                 </div>
@@ -236,7 +236,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <li class="list-group-item">
                                 <div class="checkbox" >
                                     <label>
-                                        <input type="checkbox" value="">
+                                        <input type="checkbox" value="eee" name="depart[]">
                                         Electrical and Electronics Engineering
                                     </label>
                                 </div>
@@ -244,7 +244,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <li class="list-group-item">
                                 <div class="checkbox"  >
                                     <label>
-                                        <input type="checkbox" value="">
+                                        <input type="checkbox" value="ece" name="depart[]">
                                          Electronics and Communication Engineering
                                     </label>
                                 </div>
@@ -252,8 +252,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <li class="list-group-item">
                                 <div class="checkbox"  >
                                     <label>
-                                        <input type="checkbox" value="">
-                                        Biomedical Engineering
+                                        <input type="checkbox" value="ebe" name="depart[]">
+                                        Electronics and Biomedical Engineering
                                     </label>
                                 </div>
                             </li>
@@ -271,7 +271,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <li class="list-group-item">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value="">
+                                        <input type="checkbox" value="f5" name="rating[]">
                                         5* only
                                     </label>
                                 </div>
@@ -279,7 +279,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <li class="list-group-item">
                                 <div class="checkbox" >
                                     <label>
-                                        <input type="checkbox" value="">
+                                        <input type="checkbox" value="f4" name="rating[]">
                                         4* and above
                                     </label>
                                 </div>
@@ -287,7 +287,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <li class="list-group-item">
                                 <div class="checkbox"  >
                                     <label>
-                                        <input type="checkbox" value="">
+                                        <input type="checkbox" value="f3" name="rating[]">
                                         3* and above
                                     </label>
                                 </div>
@@ -295,7 +295,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                         <li class="list-group-item">
                                 <div class="checkbox"  >
                                     <label>
-                                        <input type="checkbox" value="">
+                                        <input type="checkbox" value="f2" name="rating[]">
                                         2* and above
                                     </label>
                                 </div>
@@ -303,8 +303,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                         <li class="list-group-item">
                                 <div class="checkbox"  >
                                     <label>
-                                        <input type="checkbox" value="">
-                                        1* and above
+                                        <input type="checkbox" value="f1" name="rating[]">
+                                         1* and above
                                     </label>
                                 </div>
                             </li>
@@ -320,7 +320,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <li class="list-group-item">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value="">
+                                        <input type="checkbox" value="y2016" name="year[]">
                                         2016
                                     </label>
                                 </div>
@@ -328,7 +328,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <li class="list-group-item">
                                 <div class="checkbox" >
                                     <label>
-                                        <input type="checkbox" value="">
+                                        <input type="checkbox" value="y2015" name="year[]">
                                         2015
                                     </label>
                                 </div>
@@ -336,7 +336,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <li class="list-group-item">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value="">
+                                        <input type="checkbox" value="y2014" name="year[]">
                                         2014
                                     </label>
                                 </div>
@@ -346,7 +346,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <li class="list-group-item">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value="">
+                                        <input type="checkbox" value="y2013" name="year[]">
                                         2013
                                     </label>
                                 </div>
@@ -354,8 +354,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <li class="list-group-item">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value="">
-                                        2012
+                                        <input type="checkbox" value="y2012" name="year[]">
+                                         2012
                                     </label>
                                 </div>
                             </li>
@@ -365,7 +365,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
         </div>
     </div>
+    
 </div>
+</form>
 <script src="search.js"></script>
 
 </body>
