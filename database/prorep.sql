@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 20, 2017 at 04:34 PM
+-- Generation Time: Mar 20, 2017 at 05:16 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -52,14 +52,22 @@ INSERT INTO `faculty` (`fid`, `name`, `pass`, `dept`, `email`) VALUES
 CREATE TABLE `project` (
   `pid` int(50) NOT NULL,
   `pname` varchar(100) NOT NULL,
-  `year` date NOT NULL,
+  `year` int(11) NOT NULL,
   `members` int(5) NOT NULL,
-  `cor_id` int(50) NOT NULL,
+  `cor_id` varchar(100) NOT NULL,
   `file` varchar(100) NOT NULL,
   `tags` varchar(100) NOT NULL,
   `dept` varchar(100) NOT NULL,
   `rating` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `project`
+--
+
+INSERT INTO `project` (`pid`, `pname`, `year`, `members`, `cor_id`, `file`, `tags`, `dept`, `rating`) VALUES
+(1234, 'pro name', 2017, 4, 'asd', 'ashma_mj', 'php html', 'cs', 8),
+(1235, 'project', 2017, 4, 'asd', 'krishna_priya', 'html python django', 'cs', 9);
 
 -- --------------------------------------------------------
 
