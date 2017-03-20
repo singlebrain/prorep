@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
     <?php 
         $usid = $this->session->userdata('user_id');
-        $cor_pro = $this->session->userdata('pro');
+        $row = $this->session->userdata('pro');
         $this->session->unset_userdata('pro');
     ?>
     <div id="wrapper">
@@ -79,18 +79,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Cordinated Projects</h1>
+                    <h1 class="page-header">Rate Project</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
             <div class="row">
                 <div class="col-lg-12">
-                <?php
-                                        
-                        foreach ($cor_pro->result() as $row)
-                        {
-                    ?>
+                
                         <div class="panel panel-default">
                     
                         <div class="panel-heading">
@@ -100,36 +96,59 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                             <div class="row">
 
-                                <div class="col-lg-6">
+                                <div class="col-lg-9">
                                     <div class="col-lg-12">
-                                        <div class="col-lg-4">
+                                        <div class="col-lg-3">
                                             year: <?php echo $row->year?>
                                         </div>
-                                        <div class="col-lg-4">
+                                        <div class="col-lg-3">
                                             members: <?php echo $row->members?>
                                         </div>
-                                        <div class="col-lg-4">
+                                        <div class="col-lg-3">
                                             Overall Rating: <?php echo $row->rating?>
+                                        </div>                                    
+                                        <div  class="col-lg-3">  
+                                            <a class="btn btn-info" href=<?php echo base_url().'uploads/'.$row->file.'.pdf';?> target="_blank">View Project</a> 
                                         </div>
-
                                     </div>
                                     <br></br>
-                                    <div  class="col-lg-3">  
-                                        <a class="btn btn-info" href=<?php echo base_url().'uploads/'.$row->file.'.pdf';?> target="_blank">View Project</a> 
+                                    <?php echo validation_errors();?>
+                                    <?php echo form_open('faculty/ratesubmit/'.$row->pid); ?>
+                                    <div class="col-lg-6">
+                                        <form role="form" >
+                                            
+                                            <div class="form-group">
+                                                <label>Rating 1</label>
+                                                <input name= "rate1" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Rating 2</label>
+                                                <input name= "rate2" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Rating 3</label>
+                                                <input name= "rate3" class="form-control" >
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Rating 4</label>
+                                                <input name= "rate4" class="form-control" >
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Rating 4</label>
+                                                <input name= "rate5" class="form-control" >
+                                            </div>
+                                           
+                                            <div class="col-lg-6">
+                                            <button type="submit" class="btn btn-lg btn-success btn-block">Submit Rating</button>
+                                            </div>
+                                            
+                                        </form>
                                     </div>
-                                    <div class="col-lg-1"></div>
-                                    <div>
-
-                                        <a class="btn btn-success" href=<?php echo base_url().'index.php/faculty/rateproject/'.$row->pid; ?> >Rating</a>
-                                    </div>
-
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <?php
-                        }
-                    ?>
+                    
                     
                 </div>
             </div>
