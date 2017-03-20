@@ -75,7 +75,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Profile Settings</h1>
+                    <h1 class="page-header">Cordinated Projects</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -84,42 +84,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Basic Form Elements
+                            
                         </div>
                         <div class="panel-body">
                             <div class="row">
-                            <?php echo validation_errors();?>
-                            <?php echo form_open('faculty/checkform/'.$usid); ?>
                                 <div class="col-lg-6">
-                                    <form role="form" action="">
-                                        <div class="form-group">
-                                            <label>Current Password</label>
-                                            <input name= "pass" class="form-control" >
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Name</label>
-                                            <input name= "name" class="form-control">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>New Password</label>
-                                            <input name= "pass1" class="form-control" >
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Retype New Password</label>
-                                            <input name= "pass2" class="form-control" >
-                                        </div>
-                                        <div class="form-group">
-                                            <label>E-mail id</label>
-                                            <input name= "email" class="form-control" >
-                                        </div>
-                                       
-                                        <div class="col-lg-6">
-                                        <button type="submit" class="btn btn-lg btn-success btn-block">Submit Button</button>
-                                        </div>
-                                        <div class="col-lg-6">
-                                        <button type="reset" class="btn btn-lg btn-success btn-block">Reset Button</button>
-                                        </div>
-                                    </form>
+                                    
+                                    <?php
+                                        $array= array('asdfghjkl','qwertyuiop','zxcvbnm');
+                                        foreach ($array as $key ) {
+                                    ?>
+                                    <div class="form-group">
+                                        <label>Current Password</label>
+                                        <input name= "pass" class="form-control" >
+                                    </div>
+                                    <?php
+                                        }
+                                    ?>
                                 </div>
                             </div>
                         </div>

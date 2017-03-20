@@ -12,6 +12,12 @@ class faculty extends CI_Controller {
 	{
 
 	}
+	public function cordinated_project($usid)
+	{
+		$this->session->set_userdata('user_id', $usid);
+		$cor_pro = $this->FacultyModel->get_cord_proj($usid);
+		$this->load->view('cordinated_project');
+	}
 	public function asdfg($usid)
 	{
 		$this->session->set_userdata('user_id', $usid);

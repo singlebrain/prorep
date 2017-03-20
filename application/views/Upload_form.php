@@ -100,22 +100,29 @@
            
                
                      
-                                  <!--<?php echo $error;?> -->
+                 <!--<?php echo $error;?> -->
 
 
-                                  <div class="row">
+                <div class="row">
                 <div class="col-lg-12">
-.                    <div class="panel panel-default">
+                        <div class="panel panel-default">
                         <div class="panel-heading">
                             File Upload
                         </div>
                         <div class="panel-body">
                             <div class="row">
                             <?php echo validation_errors();?>
+<<<<<<< Updated upstream
 
       <?php echo form_open_multipart('upload/do_upload');?> 
         <?php echo form_open('fileuploadedit/checkform'); ?>
       <div class="col-lg-6">
+=======
+                            <?php echo form_open('fileuploadedit/checkform'); ?>
+                           <?php echo form_open_multipart('upload/do_upload');?> 
+        
+                             <div class="col-lg-6">
+>>>>>>> Stashed changes
                                     <form role="form" action="">
                                         <div class="form-group">
                                             <label>Project Name</label>

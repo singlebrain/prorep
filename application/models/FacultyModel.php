@@ -4,12 +4,18 @@
 * 
 */
 class FacultyModel extends CI_Model
+function __construct() 
+    {
+        parent::__construct();
+        $this->load->database();
+        $this->load->library('session');
+        $this->load->model('FacultyModel');
+    }
 {
 	
 	public function passcheck($a, $abc)
 	{
 		# code...
-		$this->load->database();
 		$query = $this->db->query('SELECT fid, pass FROM faculty');
 
 		foreach ($query->result() as $row)
@@ -24,6 +30,11 @@ class FacultyModel extends CI_Model
 
 			return false;
 		
+	}
+	public function get_cord_proj($fid)
+	{
+		$query = $this->db->query('SELECT fid, pass FROM project');
+
 	}
 	public function checkrepeat($facid)
 	{

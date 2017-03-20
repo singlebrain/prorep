@@ -67,7 +67,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <a href=<?php echo base_url().'index.php/SearchController/asdfg/'.$usid ?>><i class="fa fa-search fa-fw"></i> Search</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Cordinated Projects</a>
+                            <a href=<?php echo base_url().'index.php/faculty/cordinated_project/'.$usid ?>><i class="fa fa-bar-chart-o fa-fw"></i> Cordinated Projects</a>
                             
                             <!-- /.nav-second-level -->
                         </li>
