@@ -23,7 +23,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 
 <body>
-    <?php $usid = $this->session->userdata('user_id');?>
+    <?php 
+        $usid = $this->session->userdata('user_id');
+        $cor_pro = $this->session->userdata('pro');
+        $this->session->unset_userdata('pro');
+    ?>
     <div id="wrapper">
 
         <!-- Navigation -->
@@ -82,29 +86,35 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <!-- /.row -->
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="panel panel-default">
+                <?php
+                                        
+                        foreach ($cor_pro->result() as $row)
+                        {
+                    ?>
+                        <div class="panel panel-default">
+                    
                         <div class="panel-heading">
-                            
+                        asdfg
                         </div>
                         <div class="panel-body">
+
                             <div class="row">
+
                                 <div class="col-lg-6">
                                     
-                                    <?php
-                                        $array= array('asdfghjkl','qwertyuiop','zxcvbnm');
-                                        foreach ($array as $key ) {
-                                    ?>
+                                    
                                     <div class="form-group">
                                         <label>Current Password</label>
                                         <input name= "pass" class="form-control" >
-                                    </div>
-                                    <?php
-                                        }
-                                    ?>
+                                    </div>                                    
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <?php
+                        }
+                    ?>
+                    
                 </div>
             </div>
             <!-- /.row -->

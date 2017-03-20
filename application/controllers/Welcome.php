@@ -42,12 +42,12 @@ class Welcome extends CI_Controller {
 		{
 			$this->load->view('login');
 		}
-<<<<<<< HEAD
-		else
-		{	$usid = $this->input->post('email',true);
-			echo $usid;
-			redirect("LoginController/asd/".$usid);	
-=======
+
+		//else
+		//{	$usid = $this->input->post('email',true);
+		//	echo $usid;
+		//	redirect("LoginController/asd/".$usid);	
+		//}
 		elseif( $usert=='student')
 		{	
 			redirect(base_url().'index.php/student/asdfg/'.$usid);	
@@ -55,7 +55,7 @@ class Welcome extends CI_Controller {
 		elseif( $usert=='faculty')
 		{	
 			redirect(base_url().'index.php/SearchController/asdfg/'.$usid);	
->>>>>>> c4c881959c099a4bb5f519697f888fe39a89f76c
+
 		}
 
 	}
