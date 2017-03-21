@@ -24,6 +24,13 @@ class faculty extends CI_Controller {
 		$this->session->set_userdata('user_id', $usid);
 		$this->load->view('facultyprofileedit');
 	}
+	public function rateproject($pid)
+	{
+		$row = $this->FacultyModel->get_proj_details($pid);
+		$this->session->set_userdata('user_id', $row->cor_id);
+		$this->session->set_userdata('pro', $row);
+		$this->load->view('rateproject');
+	}
 	public function checkform($usid)
 	{
 		$this->form_validation->set_rules('name','name','required');
@@ -47,6 +54,34 @@ class faculty extends CI_Controller {
 			
 			
 			redirect(base_url().'index.php/SearchController/asdfg/'.$usid);	
+
+
+		}
+	}
+	public function ratesubmit($pid)
+	{
+		$this->form_validation->set_rules('rate1','name','required|integer|less_than[11]|greater_than[0]');
+		$this->form_validation->set_rules('rate2',' password','required|integer|less_than[11]|greater_than[0]');
+		$this->form_validation->set_rules('rate3',' New password','required|integer|less_than[11]|greater_than[0]');
+		$this->form_validation->set_rules('rate4','Re-type password','required|integer|less_than[11]|greater_than[0]');
+		$this->form_validation->set_rules('rate5','E-mail id','required|integer|less_than[11]|greater_than[0]');
+		$row = $this->FacultyModel->get_proj_details($pid);
+		$this->session->set_userdata('user_id', $row->cor_id);
+		$this->session->set_userdata('pro', $row);
+		if($this->form_validation->run()==false)
+		{
+			
+			$this->load->view('rateproject');
+		}
+		else
+		{
+			$rate1 = $this->input->post('rate1');
+			$rate2 = $this->input->post('rate2');
+			$rate3 = $this->input->post('rate3');
+			$rate4 = $this->input->post('rate4');
+			$rate5 = $this->input->post('rate5');
+			$this->FacultyModel->rateproject($pid,$rate1,$rate2,$rate3,$rate4,$rate5);
+			redirect(base_url().'index.php/faculty/cordinated_project/'.$row->cor_id);	
 
 
 		}

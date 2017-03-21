@@ -38,6 +38,20 @@ class FacultyModel extends CI_Model
 		return $query;
 
 	}
+	public function rateproject($pid,$rate1,$rate2,$rate3,$rate4,$rate5)
+	{
+
+		$query = $this->db->query('UPDATE project
+        SET rating = \''.$rate1.'\'
+        WHERE pid=\''.$pid.'\'');
+			
+	}
+	public function get_proj_details($pid)
+	{
+		$query = $this->db->query('SELECT * FROM project WHERE pid = \''.$pid.'\'');
+		$row=$query->row();
+		return $row;
+	}
 	public function checkrepeat($facid)
 	{
 		# code...
