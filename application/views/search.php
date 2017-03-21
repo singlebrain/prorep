@@ -165,7 +165,7 @@
                           <div class="input-group custom-search-form">
                             <input type="text" name="keyword" class="form-control" placeholder="Enter your keyword...">
                              <span class="input-group-btn">
-                              <button class="btn btn-default" type="button">
+                              <button class="btn btn-default" type="submit">
                                   <i class="fa fa-search"></i> 
                              </button>
                              </span>

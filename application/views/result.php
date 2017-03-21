@@ -1,4 +1,6 @@
-
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,34 +12,22 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Project Repository - Bootstrap Admin Theme</title>
+    <title>Project Respository</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- MetisMenu CSS -->
-    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
-
-    <!-- Morris Charts CSS -->
-    <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+   
+    <link href="<?php echo base_url('assets/css/sb-admin-2.css') ?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/css/metisMenu.min.css') ?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/css/bootstrap.min.css') ?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/css/font-awesome.min.css') ?>" rel="stylesheet"> 
+    
 </head>
 
 <body>
-
+    <?php 
+        $usid = $this->session->userdata('user_id');
+        $cor_pro = $this->session->userdata('pro');
+        $this->session->unset_userdata('pro');
+    ?>
     <div id="wrapper">
 
         <!-- Navigation -->
@@ -53,41 +43,115 @@
             </div>
             <!-- /.navbar-header -->
 
-                    </a>
-                </li>
-                <!-- /.dropdown -->
-            </ul>
-            <!-- /.navbar-top-links -->
 
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
-                        <li>
-                            <a href="index.html"><i class="fa fa-search fa-fw"></i> search</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> upload right</a>
-                            
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
-                            <a href="tables.html"><i class="fa fa-table fa-fw"></i> coordinated projects</a>
-                        </li>
-                        <li>
-                            <a href="forms.html"><i class="fa fa-wrench fa-fw"></i> settings</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-power-off fa-fw"></i> log out</a>
-                            
-                            <!-- /.nav-second-level -->
-                        </li>
                        
+                        <li>
+                            <a href=<?php echo base_url().'index.php/SearchController/asdfg/'.$usid ?>><i class="fa fa-search fa-fw"></i> Search</a>
+                        </li>
+                        <li>
+                            <a href=<?php echo base_url().'index.php/faculty/cordinated_project/'.$usid ?>><i class="fa fa-bar-chart-o fa-fw"></i> Cordinated Projects</a>
+                            
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="tables.html"><i class="fa fa-edit fa-fw "></i> Upload Rights</a>
+                        </li>
                         
+                        <li>
+                            <a href=<?php echo base_url().'index.php/faculty/asdfg/'.$usid ?>><i class="fa fa-wrench fa-fw"></i> Profile Settings</a>
+                        </li> 
+                        <li>
+                            <a href= <?php echo base_url().'index.php/faculty/facultycreate/'.$usid?> ><i class="fa fa-user-plus fa-fw" aria-hidden="true"></i> Create new Faculty</a>
+                        </li>
+                        <li>
+                            <a href=<?php echo base_url().'index.php/welcome'?>><i class="fa fa-power-off fa-fw"></i> Logout</a>
+                        </li>  
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
             </div>
             <!-- /.navbar-static-side -->
         </nav>
-        </body>
-        </html>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Cordinated Projects</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                <?php
+                                        
+                        foreach ($cor_pro->result() as $row)
+                        {
+                    ?>
+                        <div class="panel panel-default">
+                    
+                        <div class="panel-heading">
+                        <?php echo $row->pname; ?>
+                        </div>
+                        <div class="panel-body">
+
+                            <div class="row">
+
+                                <div class="col-lg-6">
+                                    <div class="col-lg-12">
+                                        <div class="col-lg-4">
+                                            year: <?php echo $row->year?>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            members: <?php echo $row->members?>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            Overall Rating: <?php echo $row->rating?>
+                                        </div>
+
+                                    </div>
+                                    <br></br>
+                                    <div  class="col-lg-3">  
+                                        <a class="btn btn-info" href=<?php echo base_url().'uploads/'.$row->file.'.pdf';?> target="_blank">View Project</a> 
+                                    </div>
+                                    <div class="col-lg-1"></div>
+                                    <div>
+
+                                        <a class="btn btn-success" href=<?php echo base_url().'index.php/faculty/rateproject/'.$row->pid; ?> >Rating</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+                        }
+                    ?>
+                    
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>
