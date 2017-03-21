@@ -6,6 +6,13 @@ class fileuploadedit extends CI_Controller {
 	public function index()
 	{
 
+		//$this->load->view('Upload_form');
+	}
+
+
+	public function asdfg($usid)
+	{	
+		$this->session->set_userdata('user_id', $usid);
 		$this->load->view('Upload_form');
 	}
 	public function checkform()
@@ -20,21 +27,26 @@ class fileuploadedit extends CI_Controller {
 		
 		if($this->form_validation->run()==false)
 		{ 
+			$this->session->set_userdata('user_id', $usid);
 			$this->load->view('Upload_form');
 
 
 		}
 		else
 		{
-			//$pid = $this->input->post('pid');
+			$this->load->view('Upload_success');
+			
+			//$pname = $this->input->post('pname');
 			//$cid = $this->input->post('cid');
 			//$sid = $this->input->post('sid');
-			
+		   // $com_date = $this->input->post('com_date');
+			//$dept = $this->input->post('dept');
+			//$members = $this->input->post('members');
+
+			//$this->UploadModel->modify($pname,$cid,$sid,$com_date,$dept,$members);
 			
 
-			//$this->UploadModel->modify($pid,$cid,$sid);
-			$this->load->view('Upload_success');
-
+			//redirect(base_url().'index.php/upload/asdfg/'.$usid);
 
 		}
 	}

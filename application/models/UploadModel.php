@@ -5,8 +5,10 @@
 		{
 
 		}
-		Public function uploader($data)
+		public function uploader($data)
 		{	
+
+
 			foreach ($data as $item => $value)
 				if($item == 'full_path')
 				{
