@@ -10,7 +10,7 @@
 		
       public function index() { 
       
-        // $this->load->view('upload_form', array('error' => ' ' )); 
+         $this->load->view('upload_form', array('error' => ' ' )); 
       } 
       public function upload($usid) { 
          
