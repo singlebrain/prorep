@@ -112,32 +112,23 @@
                         <div class="panel-body">
                             <div class="row">
                             <?php echo validation_errors();?>
-<<<<<<< Updated upstream
 
-      <?php echo form_open_multipart('upload/do_upload');?> 
-        <?php echo form_open('fileuploadedit/checkform'); ?>
+
+      <?php echo form_open_multipart('upload/do_upload/'.$usid);?> 
+
       <div class="col-lg-6">
-=======
-                            <?php echo form_open('fileuploadedit/checkform'); ?>
-                           <?php echo form_open_multipart('upload/do_upload');?> 
-        
-                             <div class="col-lg-6">
->>>>>>> Stashed changes
-                                    <form role="form" action="">
+        <form role="form" action="">
                                         <div class="form-group">
                                             <label>Project Name</label>
                                             <input name= "pname" class="form-control" >
                                         </div>
-                                        <div class="form-group">
-                                            <label>Student id</label>
-                                            <input name= "sid" class="form-control">
-                                        </div>
+                                        
                                         <div class="form-group">
                                             <label>Coordinator id</label>
-                                            <input name= "cid" class="form-control">
+                                            <input name= "cor_id" class="form-control">
                                         </div>
                                          <div class="form-group">
-                                            <label>department</label>
+                                            <label>Department</label>
                                             <input name= "dept" class="form-control">
                                         </div>
                                          <div class="form-group">
@@ -145,12 +136,12 @@
                                             <input name= "members" class="form-control">
                                         </div>
                                         <div class="form-group">
-                                            <label>commence date</label>
-                                            <input name= "com_date" class="form-control" >
+                                            <label>Year</label>
+                                            <input name= "year" class="form-control" >
                                         </div>
                                          <div class="form-group">
-                                            <label>metatags</label>
-                                            <input name= "metatags" class="form-control" >
+                                            <label>Keywords</label>
+                                            <input name= "tags" class="form-control" >
                                         </div>
                                           <div class="form-group">
                                             <label>Filename</label>
