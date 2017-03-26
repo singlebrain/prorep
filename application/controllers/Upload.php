@@ -10,6 +10,10 @@
 		
       public function index() { 
       
+        
+
+
+
          $this->load->view('upload_form', array('error' => ' ' )); 
       } 
       public function upload($usid) { 
@@ -75,13 +79,13 @@
               $cor_id=$this->input->post('cor_id');
               $tags=$this->input->post('tags');
               $dept=$this->input->post('dept');
-              
+            
             $data = array('upload_data' => $this->upload->data()); 
            $string= $data['upload_data'];
            $file= $string['orig_name'];
            
-            $this->UploadModel->uploader($pname,$year,$members,$cor_id,$tags,$dept,$file);
-           $this->load->view('upload_success', $data); 
+            $this->UploadModel->uploader($pname,$year,$members,$cor_id,$tags,$dept,$file,$usid);
+           //$this->load->view('upload_success', $data); 
             
          } 
       }

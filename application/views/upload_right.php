@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <?php 
         $usid = $this->session->userdata('user_id');
         $cor_pro = $this->session->userdata('pro');
-        $this->session->unset_userdata('pro');
+    $this->session->unset_userdata('pro');
     ?>
     <div id="wrapper">
 
@@ -57,7 +57,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                           <a href=<?php echo base_url().'index.php/UploadController/asdfg/'.$usid ?>><i class="fa fa-edit fa-fw "></i> Upload Right</a>
+                            <a href=<?php echo base_url().'index.php/UploadController/asdfg/'.$usid ?>><i class="fa fa-edit fa-fw "></i> Upload Right</a>
                         </li>
                         
                         <li>
@@ -79,59 +79,58 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Cordinated Projects</h1>
+                    <h1 class="page-header">Upload Right</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
-            <div class="row">
+           
+
+
+                <div class="row">
                 <div class="col-lg-12">
-                <?php
-                                        
-                        foreach ($cor_pro->result() as $row)
-                        {
-                    ?>
                         <div class="panel panel-default">
-                    
                         <div class="panel-heading">
-                        <?php echo $row->pname; ?>
+                             Upload Right
                         </div>
                         <div class="panel-body">
-
                             <div class="row">
+                            <?php echo validation_errors();?>
 
-                                <div class="col-lg-6">
-                                    <div class="col-lg-12">
-                                        <div class="col-lg-4">
-                                            year: <?php echo $row->year?>
+
+      <?php echo form_open_multipart('UploadController/uploadright/'.$usid);?> 
+
+      <div class="col-lg-6">
+        <form role="form" action="">
+                                        <div class="form-group">
+                                            <label>user id</label>
+                                            <input name= "usid" class="form-control" >
                                         </div>
-                                        <div class="col-lg-4">
-                                            members: <?php echo $row->members?>
+                                        
+                                        
+                                         <div class="form-group">
+                                            <label>Number of uploads allowed</label>
+                                            <input name= "uploadno" class="form-control">
                                         </div>
-                                        <div class="col-lg-4">
-                                            Overall Rating: <?php echo $row->rating?>
-                                        </div>
-
-                                    </div>
-                                    <br></br>
-                                    <div  class="col-lg-3">  
-                                        <a class="btn btn-info" href=<?php echo base_url().'uploads/'.$row->file;?> target="_blank">View Project</a> 
-                                    </div>
-                                    <div class="col-lg-1"></div>
-                                    <div>
-
-                                        <a class="btn btn-success" href=<?php echo base_url().'index.php/faculty/rateproject/'.$row->pid; ?> >Rating</a>
-                                    </div>
-
-                                </div>
+                                        
+                                     
+         
                             </div>
                         </div>
+                        <!-- /.panel-heading -->
+                        <!-- /.panel-body -->
+                        <div class="panel-footer">
+                           <div class="input-group">
+                                 <input type = "submit" value = "upload" /> 
+      </form> 
+                               
+                            </div> 
+                        </div>
+                        <!-- /.panel-footer -->
                     </div>
-                    <?php
-                        }
-                    ?>
-                    
+                    <!-- /.panel .chat-panel -->
                 </div>
+                <!-- /.col-lg-4 -->
             </div>
             <!-- /.row -->
         </div>
@@ -149,9 +148,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- Metis Menu Plugin JavaScript -->
     <script src="../vendor/metisMenu/metisMenu.min.js"></script>
 
+    <!-- Morris Charts JavaScript -->
+    <script src="../vendor/raphael/raphael.min.js"></script>
+    <script src="../vendor/morrisjs/morris.min.js"></script>
+    <script src="../data/morris-data.js"></script>
+
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
+
+      
+ 
 
 </body>
 
 </html>
+`
+
+
+
+
+
+user id  csu141
+no of uploads
