@@ -53,7 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="tables.html"><i class="fa fa-edit fa-fw "></i> Upload Rights</a>
+                             <a href=<?php echo base_url().'index.php/UploadController/asdfg/'.$usid ?>><i class="fa fa-edit fa-fw "></i> Upload Right</a>
                         </li>
                         
                         <li>

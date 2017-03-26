@@ -37,7 +37,14 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" type="css/search.css">
 </head>
 
 <body>
@@ -104,8 +111,9 @@
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
-            <!-- /.row -->
+             
             <div class="row">
+            <!--
                 <div class="col-lg-3 col-md-6">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
@@ -129,7 +137,7 @@
                     </div>
                  </div>
 
-
+                
 
                 <div class="col-lg-3 col-md-6">
                     <div class="panel panel-green">
@@ -139,7 +147,7 @@
                                   <i class="fa fa-bookmark fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">12</div>    <!-- /.count should be generated automatically-->
+                                    <div class="huge">12</div>   
                                     <div>Bookmarks</div>
                                 </div>
                             </div>
@@ -154,46 +162,14 @@
                     </div>
                 </div>
 
-                <!-- /.col-lg-8 -->
-
- <form action="filtering.php" method=get>
-                     <div class="row">
-                        <div class="col-lg-12">
-                                        <br>
-                <br>        
-
-                          <div class="input-group custom-search-form">
-                            <input type="text" name="keyword" class="form-control" placeholder="Enter your keyword...">
-                             <span class="input-group-btn">
-                              <button class="btn btn-default" type="submit">
-                                  <i class="fa fa-search"></i> 
-                             </button>
-                             </span>
-                         </div>
-                                         </br>
-                </br>
-                            <!-- /input-group -->
-                      </div>
-                     
-                </div>
-
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->              
-         
-              <div class="col-lg-12">
+               /.col-lg-8 -->
+            <?php echo form_open('SearchController/search/'.$usid); ?>
+            <form method=get>
                
-<!DOCTYPE html>
-<html>
-<head>
+                <div class="col-lg-12">
+               
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
- <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+
 
 <div class="container">
   <div class="panel-group">
@@ -208,21 +184,16 @@
         </h4>
       </div>
       <div id="collapse1" class="panel-collapse collapse">
-        <div class="panel-body"><!DOCTYPE html>
-<html>
+        <div class="panel-body">
 
-<body>
-
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-<link rel="stylesheet" type="css/search.css">
 <div class="container-fluid">
 
     <div class="row">
-        <div class="col-xs-6 col-sm-3">
+        <div>
             <div id="accordion" class="panel panel-primary behclick-panel">                                 
                 </div>
                 <div class="panel-body" >
+                <div class="col-lg-3">
                     <div class="panel-heading " >
                         <h4 class="panel-title">
                             <a data-toggle="collapse" href="#collapse0">
@@ -235,7 +206,7 @@
                             <li class="list-group-item">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value="cse" name="depart[]">
+                                        <input type="radio" value="cse" name="depart[]">
                                         Computer Science and Engineering
                                     </label>
                                 </div>
@@ -243,7 +214,7 @@
                             <li class="list-group-item">
                                 <div class="checkbox" >
                                     <label>
-                                        <input type="checkbox" value="eee" name="depart[]">
+                                        <input type="radio" value="eee" name="depart[]">
                                         Electrical and Electronics Engineering
                                     </label>
                                 </div>
@@ -251,7 +222,7 @@
                             <li class="list-group-item">
                                 <div class="checkbox"  >
                                     <label>
-                                        <input type="checkbox" value="ece" name="depart[]">
+                                        <input type="radio" value="ece" name="depart[]">
                                          Electronics and Communication Engineering
                                     </label>
                                 </div>
@@ -259,14 +230,15 @@
                             <li class="list-group-item">
                                 <div class="checkbox"  >
                                     <label>
-                                        <input type="checkbox" value="ebe" name="depart[]">
+                                        <input type="radio" value="ebe" name="depart[]">
                                         Electronics and Biomedical Engineering
                                     </label>
                                 </div>
                             </li>
                         </ul>
                     </div>
-
+                </div>
+                <div class="col-lg-3">
 
                     <div class="panel-heading" >
                         <h4 class="panel-title">
@@ -278,7 +250,7 @@
                             <li class="list-group-item">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value="f5" name="rating[]">
+                                        <input type="radio" value="5" name="rating[]">
                                         5* only
                                     </label>
                                 </div>
@@ -286,7 +258,7 @@
                             <li class="list-group-item">
                                 <div class="checkbox" >
                                     <label>
-                                        <input type="checkbox" value="f4" name="rating[]">
+                                        <input type="radio" value="4" name="rating[]">
                                         4* and above
                                     </label>
                                 </div>
@@ -294,7 +266,7 @@
                             <li class="list-group-item">
                                 <div class="checkbox"  >
                                     <label>
-                                        <input type="checkbox" value="f3" name="rating[]">
+                                        <input type="radio" value="3" name="rating[]">
                                         3* and above
                                     </label>
                                 </div>
@@ -302,7 +274,7 @@
                                                         <li class="list-group-item">
                                 <div class="checkbox"  >
                                     <label>
-                                        <input type="checkbox" value="f2" name="rating[]">
+                                        <input type="radio" value="2" name="rating[]">
                                         2* and above
                                     </label>
                                 </div>
@@ -310,16 +282,18 @@
                                                         <li class="list-group-item">
                                 <div class="checkbox"  >
                                     <label>
-                                        <input type="checkbox" value="f1" name="rating[]">
+                                        <input type="radio" value="1" name="rating[]">
                                          1* and above
                                     </label>
                                 </div>
                             </li>
                         </ul>
                     </div>
+                    </div>
+                    <div class="col-lg-3">
                     <div class="panel-heading" >
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" href="#collapse2"><i class="indicator fa fa-caret-right" aria-hidden="true"></i> Year</a>
+                            <a data-toggle="collapse" href="#collapse2"><i class="indicator fa fa-caret-right" aria-hidden="true"></i> time of upload</a>
                         </h4>
                     </div>
                     <div id="collapse2" class="panel-collapse collapse">
@@ -327,24 +301,24 @@
                             <li class="list-group-item">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value="y2016" name="year[]">
-                                        2016
+                                        <input type="radio" value="1" name="year[]">
+                                        one year 
                                     </label>
                                 </div>
                             </li>
                             <li class="list-group-item">
                                 <div class="checkbox" >
                                     <label>
-                                        <input type="checkbox" value="y2015" name="year[]">
-                                        2015
+                                        <input type="radio" value="1" name="year[]">
+                                        two year
                                     </label>
                                 </div>
                             </li>
                             <li class="list-group-item">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value="y2014" name="year[]">
-                                        2014
+                                        <input type="radio" value="1" name="year[]">
+                                        three year
                                     </label>
                                 </div>
   
@@ -353,20 +327,14 @@
                             <li class="list-group-item">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value="y2013" name="year[]">
-                                        2013
+                                        <input type="radio" value="1" name="year[]">
+                                        four year
                                     </label>
                                 </div>
                             </li>
-                            <li class="list-group-item">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" value="y2012" name="year[]">
-                                         2012
-                                    </label>
-                                </div>
-                            </li>
+                            
                         </ul>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -374,19 +342,34 @@
     </div>
     
 </div>
-</form>
+
 <script src="search.js"></script>
 
-</body>
-</html></div>
+</div>
         
       </div>
     </div>
   </div>
+  </div>
+
+   <div class="row">
+                    <div class="col-lg-12">
+                        <br>
+                        <div class="input-group custom-search-form">
+                            <input type="text" name="keyword" class="form-control" placeholder="Enter your keyword...">
+                            <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                            <i class="fa fa-search"></i> 
+                            </button>
+                            </span>
+                        </div>
+                        </br>
+                    </div>
+                </div>
+</form>
 </div>
     
-</body>
-</html>
+
 
                          
 

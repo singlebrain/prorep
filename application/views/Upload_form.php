@@ -78,7 +78,7 @@
                             <!--<a href="#"><i class="fa fa-edit fa-fw"></i> Profile Settings</a>-->
                         </li>  
                         <li>
-                            <a href= "../../welcome"> <i class="fa fa-power-off fa-fw"></i> Logout</a>
+                             <a href=<?php echo base_url().'index.php/welcome'?>> <i class="fa fa-power-off fa-fw"></i> Logout</a>
                         </li>  
                        
                         
