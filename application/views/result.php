@@ -79,7 +79,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Cordinated Projects</h1>
+                    <h1 class="page-header">Search Results</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -88,8 +88,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="col-lg-12">
                 <?php
                                         
-                        foreach ($cor_pro->result() as $row)
+                        foreach ($cor_pro as $key=>$row)
                         {
+                            
                     ?>
                         <div class="panel panel-default">
                     
@@ -109,7 +110,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             members: <?php echo $row->members?>
                                         </div>
                                         <div class="col-lg-4">
-                                            Overall Rating: <?php echo $row->rating?>
+                                            Overall Rating: <?php echo $row->rating/2?>
                                         </div>
 
                                     </div>
@@ -117,18 +118,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <div  class="col-lg-3">  
                                         <a class="btn btn-info" href=<?php echo base_url().'uploads/'.$row->file.'.pdf';?> target="_blank">View Project</a> 
                                     </div>
-                                    <div class="col-lg-1"></div>
-                                    <div>
-
-                                        <a class="btn btn-success" href=<?php echo base_url().'index.php/faculty/rateproject/'.$row->pid; ?> >Rating</a>
-                                    </div>
+                                    
 
                                 </div>
                             </div>
                         </div>
                     </div>
                     <?php
-                        }
+                       }
                     ?>
                     
                 </div>
