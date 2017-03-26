@@ -52,6 +52,7 @@ class FacultyModel extends CI_Model
 		$row=$query->row();
 		return $row;
 	}
+
 	public function checkrepeat($facid)
 	{
 		# code...
