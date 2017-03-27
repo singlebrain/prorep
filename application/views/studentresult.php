@@ -14,34 +14,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <title>Project Respository</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- MetisMenu CSS -->
-    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    
-    <!-- Custom Fonts -->
+   
     <link href="<?php echo base_url('assets/css/sb-admin-2.css') ?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/metisMenu.min.css') ?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/bootstrap.min.css') ?>" rel="stylesheet">
-    <link href="<?php echo base_url('assets/css/font-awesome.min.css') ?>" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    <link href="<?php echo base_url('assets/css/font-awesome.min.css') ?>" rel="stylesheet"> 
+    
 </head>
 
 <body>
-<?php $usid = $this->session->userdata('user_id');?>
+    <?php 
+        $usid = $this->session->userdata('user_id');
+        $cor_pro = $this->session->userdata('pro');
+        $this->session->unset_userdata('pro');
+    ?>
     <div id="wrapper">
 
         <!-- Navigation -->
@@ -58,6 +44,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <!-- /.navbar-header -->
 
 
+            
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
@@ -86,66 +73,56 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Profile Settings</h1>
+                    <h1 class="page-header">Search Results</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="panel panel-default">
+                <?php
+                                        
+                        foreach ($cor_pro as $key=>$row)
+                        {
+                            
+                    ?>
+                        <div class="panel panel-default">
+                    
                         <div class="panel-heading">
-                            Update ur informations
+                        <?php echo $row->pname; ?>
                         </div>
                         <div class="panel-body">
+
                             <div class="row">
-                            <?php echo validation_errors();?>
-                            <?php echo form_open('studentprofileedit/checkform/'.$usid); ?>
+
                                 <div class="col-lg-6">
-                                    <form role="form" action="">
-                                        <div class="form-group">
-                                            <label>Current Password</label>
-                                            <input name= "pass" class="form-control" >
+                                    <div class="col-lg-12">
+                                        <div class="col-lg-4">
+                                            year: <?php echo $row->year?>
                                         </div>
-                                        <div class="form-group">
-                                            <label>Name</label>
-                                            <input name= "name" class="form-control">
+                                        <div class="col-lg-4">
+                                            members: <?php echo $row->members?>
                                         </div>
-                                        <div class="form-group">
-                                            <label>New Password</label>
-                                            <input name= "pass1" class="form-control" >
+                                        <div class="col-lg-4">
+                                            Overall Rating: <?php echo $row->rating/2?>
                                         </div>
-                                        <div class="form-group">
-                                            <label>Retype New Password</label>
-                                            <input name= "pass2" class="form-control" >
-                                        </div>
-                                        <div class="form-group">
-                                            <label>E-mail id</label>
-                                            <input name= "email" class="form-control" >
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Roll Num.</label>
-                                            <input name= "rollnum" class="form-control" >
-                                        </div>
-                                        
-                                        <div class="col-lg-6">
-                                        <button type="submit" class="btn btn-lg btn-success btn-block">Submit Button</button>
-                                        </div>
-                                        <div class="col-lg-6">
-                                        <button type="reset" class="btn btn-lg btn-success btn-block">Reset Button</button>
-                                        </div>
-                                    </form>
+
+                                    </div>
+                                    <br></br>
+                                    <div  class="col-lg-3">  
+                                        <a class="btn btn-info" href=<?php echo base_url().'uploads/'.$row->file.'.pdf';?> target="_blank">View Project</a> 
+                                    </div>
+                                    
+
                                 </div>
-                                
-                                <!-- /.col-lg-6 (nested) -->
                             </div>
-                            <!-- /.row (nested) -->
                         </div>
-                        <!-- /.panel-body -->
                     </div>
-                    <!-- /.panel -->
+                    <?php
+                       }
+                    ?>
+                    
                 </div>
-                <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
         </div>

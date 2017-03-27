@@ -121,6 +121,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 <label>Rating 1</label>
                                                 <input name= "rate1" class="form-control">
                                             </div>
+                                            <!--
                                             <div class="form-group">
                                                 <label>Rating 2</label>
                                                 <input name= "rate2" class="form-control">
@@ -137,7 +138,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 <label>Rating 4</label>
                                                 <input name= "rate5" class="form-control" >
                                             </div>
-                                           
+                                           -->
                                             <div class="col-lg-6">
                                             <button type="submit" class="btn btn-lg btn-success btn-block">Submit Rating</button>
                                             </div>

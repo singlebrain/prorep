@@ -67,7 +67,7 @@
                      
                         
                          <li>
-                            <a href=""><i class="fa fa-search fa-fw"></i> Search</a>
+                            <a href=<?php echo base_url().'index.php/studentsearch/asdfg/'.$usid;?>><i class="fa fa-search fa-fw"></i> Search</a>
                         </li>
                        
                         <li>

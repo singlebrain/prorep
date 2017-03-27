@@ -60,11 +60,11 @@ class faculty extends CI_Controller {
 	}
 	public function ratesubmit($pid)
 	{
-		$this->form_validation->set_rules('rate1','name','required|integer|less_than[11]|greater_than[0]');
-		$this->form_validation->set_rules('rate2',' password','required|integer|less_than[11]|greater_than[0]');
-		$this->form_validation->set_rules('rate3',' New password','required|integer|less_than[11]|greater_than[0]');
-		$this->form_validation->set_rules('rate4','Re-type password','required|integer|less_than[11]|greater_than[0]');
-		$this->form_validation->set_rules('rate5','E-mail id','required|integer|less_than[11]|greater_than[0]');
+		$this->form_validation->set_rules('rate1','rating 1','required|integer|less_than[11]|greater_than[0]');
+		//$this->form_validation->set_rules('rate2',' password','required|integer|less_than[11]|greater_than[0]');
+		//$this->form_validation->set_rules('rate3',' New password','required|integer|less_than[11]|greater_than[0]');
+		//$this->form_validation->set_rules('rate4','Re-type password','required|integer|less_than[11]|greater_than[0]');
+		//$this->form_validation->set_rules('rate5','E-mail id','required|integer|less_than[11]|greater_than[0]');
 		$row = $this->FacultyModel->get_proj_details($pid);
 		$this->session->set_userdata('user_id', $row->cor_id);
 		$this->session->set_userdata('pro', $row);
