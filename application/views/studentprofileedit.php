@@ -100,7 +100,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="panel-body">
                             <div class="row">
                             <?php echo validation_errors();?>
-                            <?php echo form_open('studentprofileedit/checkform/'.$usid); ?>
+                            <?php echo form_open('student/checkform/'.$usid); ?>
                                 <div class="col-lg-6">
                                     <form role="form" action="">
                                         <div class="form-group">
