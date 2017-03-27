@@ -155,175 +155,174 @@
 
 
 
-<div class="container">
-  <div class="panel-group">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" href="#collapse1">                 
-                              <button class="btn btn-default" type="button">
-                                  <i class="fa fa-filter"></i>
-                             </button>          
-                                </a>
-        </h4>
-      </div>
-      <div id="collapse1" class="panel-collapse collapse">
-        <div class="panel-body">
-
-<div class="container-fluid">
-
-    <div class="row">
-        <div>
-            <div id="accordion" class="panel panel-primary behclick-panel">                                 
-                </div>
-                <div class="panel-body" >
-                <div class="col-lg-3">
-                    <div class="panel-heading " >
+                <div class="container">
+                  <div class="panel-group">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" href="#collapse0">
-                                <i class="indicator fa fa-caret-down" aria-hidden="true"></i> Department
-                            </a>
+                          <a data-toggle="collapse" href="#collapse5" >                 
+                                              <button class="btn btn-default" type="button">
+                                                  <i class="fa fa-filter"></i>
+                                             </button>          
+                                                </a>
                         </h4>
-                    </div>
-                    <div id="collapse0" class="panel-collapse collapse in" >
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="radio" value="cse" name="depart[]">
-                                        Computer Science and Engineering
-                                    </label>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="checkbox" >
-                                    <label>
-                                        <input type="radio" value="eee" name="depart[]">
-                                        Electrical and Electronics Engineering
-                                    </label>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="checkbox"  >
-                                    <label>
-                                        <input type="radio" value="ece" name="depart[]">
-                                         Electronics and Communication Engineering
-                                    </label>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="checkbox"  >
-                                    <label>
-                                        <input type="radio" value="ebe" name="depart[]">
-                                        Electronics and Biomedical Engineering
-                                    </label>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3">
+                      </div>
+                      <div id="collapse5" class="panel-collapse collapse">
+                        <div class="panel-body">
+                       <div class="container-fluid">
 
-                    <div class="panel-heading" >
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" href="#collapse3"><i class="indicator fa fa-caret-down" aria-hidden="true"></i> Rating</a>
-                        </h4>
-                    </div>
-                    <div id="collapse3" class="panel-collapse collapse in">
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="radio" value="5" name="rating[]">
-                                        5* only
-                                    </label>
+                    <div class="row">
+                        <div>
+                            <div id="accordion" class="panel panel-primary behclick-panel">                                 
                                 </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="checkbox" >
-                                    <label>
-                                        <input type="radio" value="4" name="rating[]">
-                                        4* and above
-                                    </label>
+                                <div class="panel-body" >
+                                <div class="col-lg-3">
+                                    <div class="panel-heading " >
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" href="#collapse0">
+                                                <i class="indicator fa fa-caret-down" aria-hidden="true"></i> Department
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse0" class="panel-collapse collapse in" >
+                                        <ul class="list-group">
+                                            <li class="list-group-item">
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="radio" value="cse" name="depart[]">
+                                                        Computer Science and Engineering
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="checkbox" >
+                                                    <label>
+                                                        <input type="radio" value="eee" name="depart[]">
+                                                        Electrical and Electronics Engineering
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="checkbox"  >
+                                                    <label>
+                                                        <input type="radio" value="ece" name="depart[]">
+                                                         Electronics and Communication Engineering
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="checkbox"  >
+                                                    <label>
+                                                        <input type="radio" value="ebe" name="depart[]">
+                                                        Electronics and Biomedical Engineering
+                                                    </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="checkbox"  >
-                                    <label>
-                                        <input type="radio" value="3" name="rating[]">
-                                        3* and above
-                                    </label>
-                                </div>
-                            </li>
-                                                        <li class="list-group-item">
-                                <div class="checkbox"  >
-                                    <label>
-                                        <input type="radio" value="2" name="rating[]">
-                                        2* and above
-                                    </label>
-                                </div>
-                            </li>
-                                                        <li class="list-group-item">
-                                <div class="checkbox"  >
-                                    <label>
-                                        <input type="radio" value="1" name="rating[]">
-                                         1* and above
-                                    </label>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    </div>
-                    <div class="col-lg-3">
-                    <div class="panel-heading" >
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" href="#collapse2"><i class="indicator fa fa-caret-right" aria-hidden="true"></i> time of upload</a>
-                        </h4>
-                    </div>
-                    <div id="collapse2" class="panel-collapse collapse">
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="radio" value="1" name="year[]">
-                                        one year 
-                                    </label>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="checkbox" >
-                                    <label>
-                                        <input type="radio" value="1" name="year[]">
-                                        two year
-                                    </label>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="radio" value="1" name="year[]">
-                                        three year
-                                    </label>
-                                </div>
-  
-                         </li>
+                                <div class="col-lg-3">
 
-                            <li class="list-group-item">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="radio" value="1" name="year[]">
-                                        four year
-                                    </label>
+                                    <div class="panel-heading" >
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" href="#collapse3"><i class="indicator fa fa-caret-down" aria-hidden="true"></i> Rating</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse3" class="panel-collapse collapse in">
+                                        <ul class="list-group">
+                                            <li class="list-group-item">
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="radio" value="5" name="rating[]">
+                                                        5* only
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="checkbox" >
+                                                    <label>
+                                                        <input type="radio" value="4" name="rating[]">
+                                                        4* and above
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="checkbox"  >
+                                                    <label>
+                                                        <input type="radio" value="3" name="rating[]">
+                                                        3* and above
+                                                    </label>
+                                                </div>
+                                            </li>
+                                                                        <li class="list-group-item">
+                                                <div class="checkbox"  >
+                                                    <label>
+                                                        <input type="radio" value="2" name="rating[]">
+                                                        2* and above
+                                                    </label>
+                                                </div>
+                                            </li>
+                                                                        <li class="list-group-item">
+                                                <div class="checkbox"  >
+                                                    <label>
+                                                        <input type="radio" value="1" name="rating[]">
+                                                         1* and above
+                                                    </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                    <div class="panel-heading" >
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" href="#collapse2"><i class="indicator fa fa-caret-right" aria-hidden="true"></i> time of upload</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse2" class="panel-collapse collapse">
+                                        <ul class="list-group">
+                                            <li class="list-group-item">
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="radio" value="1" name="year[]">
+                                                        one year 
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="checkbox" >
+                                                    <label>
+                                                        <input type="radio" value="1" name="year[]">
+                                                        two year
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="radio" value="1" name="year[]">
+                                                        three year
+                                                    </label>
+                                                </div>
+                  
+                                         </li>
+
+                                            <li class="list-group-item">
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="radio" value="1" name="year[]">
+                                                        four year
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+                                    </div>
                                 </div>
-                            </li>
-                            
-                        </ul>
+                            </div>
+                        </div>
                     </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     
 </div>
 
