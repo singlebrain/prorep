@@ -122,11 +122,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         </div>
                                         <div class="form-group">
                                             <label>Password</label>
-                                            <input name= "pass1" class="form-control" >
+                                            <input name= "pass1" type="Password" class="form-control" >
                                         </div>
                                         <div class="form-group">
                                             <label>Retype Password</label>
-                                            <input name= "pass2" class="form-control" >
+                                            <input name= "pass2" type="Password" class="form-control" >
                                         </div>
                                         <div class="form-group">
                                             <label>E-mail id</label>

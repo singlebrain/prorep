@@ -58,7 +58,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <input class="form-control" placeholder="user name" name="email" type="type"  autofocus>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="password" type="text" value="">
+                                    <input class="form-control" placeholder="Password" name="password" type="password" value="">
                                 </div>
                                 <div class="form-group">
                                     

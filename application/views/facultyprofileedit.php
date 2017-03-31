@@ -94,7 +94,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <form role="form" action="">
                                         <div class="form-group">
                                             <label>Current Password</label>
-                                            <input name= "pass" class="form-control" >
+                                            <input name= "pass" type="Password" class="form-control" >
                                         </div>
                                         <div class="form-group">
                                             <label>Name</label>
@@ -102,11 +102,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         </div>
                                         <div class="form-group">
                                             <label>New Password</label>
-                                            <input name= "pass1" class="form-control" >
+                                            <input name= "pass1" type="Password" class="form-control" >
                                         </div>
                                         <div class="form-group">
                                             <label>Retype New Password</label>
-                                            <input name= "pass2" class="form-control" >
+                                            <input name= "pass2" type="Password" class="form-control" >
                                         </div>
                                         <div class="form-group">
                                             <label>E-mail id</label>
