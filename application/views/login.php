@@ -50,7 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <h3 class="panel-title">Please Sign In</h3>
                     </div>
                     <?php echo validation_errors();?>
-                    <?php echo form_open('welcome/checklogin'); ?>
+                    <?php echo form_open( base_url().'index.php/welcome/checklogin'); ?>
                     <div class="panel-body">
                         <form role="form">
                             <fieldset>
@@ -81,8 +81,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                     </div>
                 </div>
+                    <?php echo form_open( base_url().'index.php/welcome/signup'); ?>
                 
-                    <form role="form" action="welcome/signup">
+                    <form role="form" >
                         <fieldset>
                             <div class="form-group">  
                             <input  name="login" class="btn btn-lg btn-success btn-block" value="Dont have an account..sign up" type="submit">
