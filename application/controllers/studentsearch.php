@@ -29,13 +29,9 @@ class studentsearch extends CI_Controller {
 		 $year=$yeart[0];
 		 $rating=$ratingt[0];
 		 $dept=$deptt[0];
-		echo $keywords;
-		echo $year;
-		echo $rating;
-		echo $dept;
+		
 		$data  = array();
 		$cur=date("Y")-$year;
-		echo $cur;
 		$query = $this->Searchmodel->get_proj();
 		foreach ($query->result() as $row)
 		{
