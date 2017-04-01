@@ -101,7 +101,7 @@ class Welcome extends CI_Controller {
 		$this->form_validation->set_rules('pass1',' New password','required');
 		$this->form_validation->set_rules('pass2','Re-type password','required|callback_passmatch');
 		$this->form_validation->set_rules('email','E-mail id','required|valid_email');
-
+		$this->form_validation->set_rules('dept','Department','required');
 		if($this->form_validation->run()==false)
 		{
 			$this->load->view('signup');
@@ -114,7 +114,8 @@ class Welcome extends CI_Controller {
 			$name = $this->input->post('name');
 			$email = $this->input->post('email');
 			$rollnum = $this->input->post('rollnum');
-			$this->LoginModel->stud_create($pass1,$name,$email,$rollnum);
+			$dept = $this->input->post('dept');
+			$this->LoginModel->stud_create($pass1,$name,$email,$rollnum,$dept);
 			$this->load->view('login');	
 		}
 

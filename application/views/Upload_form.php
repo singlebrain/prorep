@@ -129,7 +129,13 @@
                                         </div>
                                          <div class="form-group">
                                             <label>Department</label>
-                                            <input name= "dept" class="form-control">
+                                            <select name="dept" class="form-control">
+                                                <option value="cse">Computer Science And Engineering</option>
+                                                <option value="ebe">Electrical And Biomedical Engineering</option>
+                                                <option value="ece">Electronics And Communication Engineering</option>
+                                                <option value="eee">Electrical And Electronics Engineering</option>
+                                                
+                                            </select>
                                         </div>
                                          <div class="form-group">
                                             <label>Number of members</label>

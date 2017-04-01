@@ -38,7 +38,7 @@ class faculty extends CI_Controller {
 		$this->form_validation->set_rules('pass1',' New password','required');
 		$this->form_validation->set_rules('pass2','Re-type password','required|callback_passmatch');
 		$this->form_validation->set_rules('email','E-mail id','required|valid_email');
-
+		$this->form_validation->set_rules('dept','Department','required');
 		if($this->form_validation->run()==false)
 		{
 			$this->session->set_userdata('user_id', $usid);
@@ -49,8 +49,8 @@ class faculty extends CI_Controller {
 			$pass1 = $this->input->post('pass1');
 			$name = $this->input->post('name');
 			$email = $this->input->post('email');
-			
-			$this->FacultyModel->modify($usid,$pass1,$name,$email);
+			$dept = $this->input->post('dept');
+			$this->FacultyModel->modify($usid,$pass1,$name,$email,$dept);
 			
 			
 			redirect(base_url().'index.php/SearchController/asdfg/'.$usid);	
@@ -122,12 +122,13 @@ class faculty extends CI_Controller {
 	}
 	public function checkcreate($usid)
 	{
-		$this->form_validation->set_rules('name','name','required');
+		//$this->form_validation->set_rules('name','name','required');
 		$this->form_validation->set_rules('facid','User Name','required|callback_norepeat');
 		$this->form_validation->set_rules('pass1',' New password','required');
 		$this->form_validation->set_rules('pass2','Re-type password','required|callback_passmatch');
-		$this->form_validation->set_rules('email','E-mail id','required|valid_email');
-
+		//$this->form_validation->set_rules('email','E-mail id','required|valid_email');
+		$this->form_validation->set_rules('dept','Department','required');
+		
 		if($this->form_validation->run()==false)
 		{
 			$this->session->set_userdata('user_id', $usid);
@@ -139,7 +140,8 @@ class faculty extends CI_Controller {
 			$name = $this->input->post('name');
 			$facid = $this->input->post('facid');
 			$email = $this->input->post('email');
-			$this->FacultyModel->addfac($facid,$pass1,$name,$email);
+			$dept = $this->input->post('dept');
+			$this->FacultyModel->addfac($facid,$pass1,$name,$email,$dept);
 			redirect(base_url().'index.php/SearchController/asdfg/'.$usid);
 
 		}

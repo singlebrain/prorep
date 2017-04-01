@@ -74,6 +74,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <label>Roll Num.</label>
                                     <input name= "rollnum" class="form-control" >
                                 </div>
+                                <div class="form-group">
+                                    <label>Dept.</label>
+                                    <select name="dept" class="form-control">
+                                        <option value="cse">Computer Science And Engineering</option>
+                                        <option value="ebe">Electrical And Biomedical Engineering</option>
+                                        <option value="ece">Electronics And Communication Engineering</option>
+                                        <option value="eee">Electrical And Electronics Engineering</option>
+                                        
+                                    </select>
+                                </div>
                                 
                                 <div class="col-lg-6">
                                 <button type="submit" class="btn btn-lg btn-success btn-block">Submit Button</button>

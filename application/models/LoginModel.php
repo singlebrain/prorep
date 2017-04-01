@@ -44,12 +44,12 @@ class LoginModel extends CI_Model
 
 			return false;	
 	}
-	public function stud_create($pass1,$name,$email,$rollnum)
+	public function stud_create($pass1,$name,$email,$rollnum,$dept)
 	{
 		$this->load->database();
-		$dept="cs";
 		
-		$this->db->query('INSERT INTO student (name, sid, pass, up_right, dept) VALUES ( \'' .$name.'\',  \'' .$rollnum.'\', \'' .$pass1.'\',\'0\',  \'' .$dept.'\')');
+		
+		$this->db->query('INSERT INTO student (name, sid, pass, up_right, dept,email) VALUES ( \'' .$name.'\',  \'' .$rollnum.'\', \'' .$pass1.'\',\'0\',  \'' .$dept.'\',\''.$email.'\')');
 	}
 
 }

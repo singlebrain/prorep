@@ -67,24 +67,21 @@ class FacultyModel extends CI_Model
 		  return true;
 	
 	}
-	public function addfac($usid,$pass1,$name,$email)
+	public function addfac($usid,$pass1,$name,$email,$dept)
 	{
 		$this->load->database();
-		$dept='cs';
+		
 		
 		$this->db->query('INSERT INTO faculty (name, fid, pass, dept) VALUES ( \'' .$name.'\',  \'' .$usid.'\', \'' .$pass1.'\',  \'' .$dept.'\')');
 	}
-	public function modify($usid,$pass1,$name,$email)
+	public function modify($usid,$pass1,$name,$email,$dept)
 	{
 		$this->load->database();
 		
-		$query =$this->db->query('SELECT  dept FROM faculty WHERE fid like \'' .$usid.'\'' );
 		
-      	  $row =$query->row();
-      	  $dept=$row->dept;
-      	  $this->db->query('DELETE FROM faculty WHERE fid like \'' .$usid.'\'' );
+      	$this->db->query('DELETE FROM faculty WHERE fid like \'' .$usid.'\'' );
 		
-		$this->db->query('INSERT INTO faculty (name, fid, pass, dept) VALUES ( \'' .$name.'\',  \'' .$usid.'\', \'' .$pass1.'\',  \'' .$dept.'\')');
+		$this->db->query('INSERT INTO faculty (name, fid, pass,email, dept) VALUES ( \'' .$name.'\',  \'' .$usid.'\', \'' .$pass1.'\',\''.$email.'\',\'' .$dept.'\')');
 	}
 }
 ?>
