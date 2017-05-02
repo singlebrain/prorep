@@ -152,7 +152,7 @@
                                           <div class="form-group">
                                             <label>Filename</label>
                                             
-                                        <input type = "file" name = "userfile" id="btn-input" type="text" class="form-control input-sm" placeholder="filename.pdf"  /> 
+                                        <input type = "file" name = "userfile" id="btn-input" type="text" class="form-control input-sm" placeholder="filename"  /> 
     
                                         </div>
         

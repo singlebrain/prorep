@@ -118,7 +118,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <form role="form" >
                                             
                                             <div class="form-group">
-                                                <label>Rating 1</label>
+                                                <label>Rating </label>
                                                 <input name= "rate1" class="form-control">
                                             </div>
                                             <!--
@@ -139,7 +139,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 <input name= "rate5" class="form-control" >
                                             </div>
                                            -->
-                                            <div class="col-lg-6">
+                                            <div class="col-lg-8">
                                             <button type="submit" class="btn btn-lg btn-success btn-block">Submit Rating</button>
                                             </div>
                                             

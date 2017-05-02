@@ -116,7 +116,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     </div>
                                     <br></br>
                                     <div  class="col-lg-3">  
-                                        <a class="btn btn-info" href=<?php echo base_url().'uploads/'.$row->file.'.pdf';?> target="_blank">View Project</a> 
+                                        <a class="btn btn-info" href=<?php echo base_url().'uploads/'.$row->file;?> target="_blank">View Project</a> 
                                     </div>
                                     
 
