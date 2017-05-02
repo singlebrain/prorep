@@ -83,7 +83,7 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href=<?php echo base_url().'index.php/UploadController/asdfg/'.$usid ?>></i> Upload Rights</a>
+                            <a href=<?php echo base_url().'index.php/UploadController/asdfg/'.$usid ?>><i class="fa fa-edit fa-fw"></i> Upload Rights</a>
                         </li>
                         
                         <li>
